@@ -1,0 +1,13 @@
+body {
+  background-color: #eee;
+}
+.container {
+  background-color: #FFF;
+  margin-top: 25px;
+  padding: 15px 35px 15px 35px;
+  box-shadow: 5px 5px 5px #888888;
+  border-radius: 4px;
+}
+.posts {
+  margin-top: 10px;
+}
