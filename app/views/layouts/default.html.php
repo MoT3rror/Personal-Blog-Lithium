@@ -17,6 +17,7 @@
 	<?php echo $this->html->link('Icon', null, array('type' => 'icon')); ?>
 </head>
 <body>
+	<a name="Top"></a>
 	<div class="container">
 
 		<div class="masthead">

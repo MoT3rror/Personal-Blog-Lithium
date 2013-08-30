@@ -6,20 +6,25 @@ class MyPosts extends \lithium\data\Model
 {
   protected $_scheme = array(
       'id'    => array(
-          'type'    => 'id',
-          'length'  => 10,
-          'null'    => false,
-          'default' => null,
+          'type'      => 'id',
+          'length'    => 10,
+          'null'      => false,
+          'default'   => null,
       ),
-      'title' => array(
-          'type'    => 'string',
-          'length'  => 255,
-          'null'    => false,
-          'default' => null,
+      'title'       => array(
+          'type'      => 'string',
+          'length'    => 255,
+          'null'      => false,
+          'default'   => null,
       ),
-      'body'  => array(
-          'type'    => 'text',
-          'null'    => true,
+      'body'        => array(
+          'type'      => 'text',
+          'null'      => true,
+      ),
+      'created_at'  => array(
+          'type'      => 'integer',
+          'null'      => true,
+          'length'    => 11,
       ),
   );
 }

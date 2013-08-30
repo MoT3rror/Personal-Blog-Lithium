@@ -48,7 +48,12 @@ class PagesController extends \lithium\action\Controller {
 
 	public function home()
 	{
-		$myPosts = MyPosts::all();
+		$myPosts = MyPosts::find('all', array(
+				'limit'		=>	5,
+				'order'		=>	array(
+						'created_at DESC'
+				)
+		));
 
 		return $this->render(array(
 			'template'  => 'home',

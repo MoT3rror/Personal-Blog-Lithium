@@ -3,3 +3,4 @@ app/libraries/*
 app/resources/tmp/*
 .*.sw[op]
 app/config/bootstrap/connections.php
+sftp-config.json

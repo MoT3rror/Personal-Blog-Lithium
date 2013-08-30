@@ -44,6 +44,7 @@ foreach($myPosts as $post): ?>
   <div class="post">
     <h4><?=$post->title ?></h4>
     <div class="body"><?=$post->body ?></div>
+    <div class="controls"><a href="#top">Top</a></div>
   </div>
 <?php 
 endforeach; ?>
