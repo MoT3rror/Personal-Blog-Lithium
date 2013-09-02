@@ -27,7 +27,7 @@ use app\models\MyPosts;
  */
 class PagesController extends \lithium\action\Controller {
 
-	private $validpages = array('home',);
+	private $validpages = array('home', 'resume');
 
 	public function view() {
 		$options = array();
@@ -42,6 +42,11 @@ class PagesController extends \lithium\action\Controller {
 			return $this->NotFound();
 		}
 
+		if(method_exists($this, $path[0]))
+		{
+			return $this->$path[0]();
+		}
+
 		$options['template'] = join('/', $path);
 		return $this->render($options);
 	}
@@ -51,13 +56,20 @@ class PagesController extends \lithium\action\Controller {
 		$myPosts = MyPosts::find('all', array(
 				'limit'		=>	5,
 				'order'		=>	array(
-						'created_at DESC'
+						'created_at' => 'DESC',
 				)
 		));
 
 		return $this->render(array(
 			'template'  => 'home',
 			'data'			=> compact('myPosts'),
+		));
+	}
+
+	public function resume()
+	{
+		return $this->render(array(
+			'template'	=>	'resume',
 		));
 	}
 

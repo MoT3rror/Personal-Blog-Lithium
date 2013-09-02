@@ -127,4 +127,24 @@ Libraries::add('app', array('default' => true));
  */
 // Libraries::add('li3_docs');
 
+/**
+ * This is the path to the li3_HTMLPurifier plugin, used for Libraries path resolution.
+ */
+define('LI3_HTMLPurifier_PATH', '/usr/local/lib/HTMLPurifier/HTMLPurifier');
+
+/**
+ * Add the HTMLPurifier libraries
+ */
+Libraries::add('HTMLPurifier', array(
+    'path'          => LI3_HTMLPurifier_PATH,
+    'includePath'   => LI3_HTMLPurifier_PATH,
+    'prefix'        => 'HTMLPurifier_',
+    'bootstrap'     => 'Bootstrap.php',
+    'loader'        => array('HTMLPurifier_Bootstrap', 'autoload'),
+));
+
+/**
+ * set config for HTML Purifier
+ */
+require_once('htmlpurifier.php');
 ?>

@@ -2,7 +2,7 @@
 
 namespace app\models;
 
-class MyPosts extends \lithium\data\Model
+class MyWorks extends \lithium\data\Model
 {
   protected $_scheme = array(
       'id'    => array(
@@ -17,9 +17,15 @@ class MyPosts extends \lithium\data\Model
           'null'      => false,
           'default'   => null,
       ),
-      'body'        => array(
+      'description'        => array(
           'type'      => 'text',
           'null'      => true,
+      ),
+      'image'              => array(
+          'type'      => 'string',
+          'length'    => 100,
+          'null'      => false,
+          'default'   => null,
       ),
       'created_at'  => array(
           'type'      => 'integer',

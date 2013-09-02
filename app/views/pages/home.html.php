@@ -34,7 +34,7 @@ $this->html->style('debug', array('inline' => false));
     <li>Ant Build Process</li>
   </ul>
 
-  This is the short list. <a href="$this->url('Work::index')">View my previous projects</a> or <a href="$this->url('Pages::resume')">View my resume</a>
+  This is the short list. <a href="<?= $this->url('MyWork::index') ?>">View my previous projects</a> or <a href="<?= $this->url('Pages::resume') ?>">View my resume</a>
 </div>
 
 <div class="posts">
@@ -43,7 +43,7 @@ foreach($myPosts as $post): ?>
   <hr />
   <div class="post">
     <h4><?=$post->title ?></h4>
-    <div class="body"><?=$post->body ?></div>
+    <div class="body"><?= $this->HTMLPurifier->sanitize($post->body) ?></div>
     <div class="controls"><a href="#top">Top</a></div>
   </div>
 <?php 
