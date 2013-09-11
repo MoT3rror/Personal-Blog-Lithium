@@ -10,7 +10,7 @@
 <html>
 <head>
 	<?php echo $this->html->charset();?>
-	<title>Application &gt; <?php echo $this->title(); ?></title>
+	<title>Joshua Bixler <?php if($this->title()){ echo '&gt; '; echo $this->title(); } ?></title>
 	<?php echo $this->html->style(array('bootstrap.min', 'main')); ?>
 	<?php echo $this->scripts(); ?>
 	<?php echo $this->styles(); ?>
@@ -19,11 +19,19 @@
 <body>
 	<a name="Top"></a>
 	<div class="container">
-
 		<div class="masthead">
 			<ul class="nav nav-pills pull-right">
 				<li>
-					<a href="#">Profile</a>
+					<a href="#">Resume</a>
+				</li>
+				<li>
+					<a href="<?= $this->url('MyWork::index') ?>">Profile</a>
+				</li>
+				<li>
+					<a href="#">#</a>
+				</li>
+				<li>
+					<a href="<?= $this->url('Pages::contact') ?>">Contact</a>
 				</li>
 				<li>
 					<a href="<?= $this->url('MyPosts::index') ?>">Archieve</a>
@@ -35,7 +43,26 @@
 		<hr>
 
 		<div class="content">
-			<?php echo $this->content(); ?>
+			<div class="rightcolumn">
+				<div class="block">
+					<div class="title">
+						Zend PHP Certify
+					</div>
+					<div class="blockcontent">
+						image of zend
+					</div>
+				</div>
+				<div class="block">
+					<div class="title">
+						Advertisement
+					</div>
+					<div class="blockcontent">
+						image of zend
+					</div>
+				</div>
+			</div>
+			<div class="leftcolumn"><?php echo $this->content(); ?></div>
+			
 		</div>
 
 		<hr>

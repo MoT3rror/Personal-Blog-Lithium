@@ -8,10 +8,53 @@ body {
   box-shadow: 5px 5px 5px #888888;
   border-radius: 4px;
 }
+.content {
+  min-height: 400px;
+}
 .posts {
   margin-top: 10px;
 }
 .posts div.controls {
   margin-left: 10px;
   margin-top: 10px;
+}
+.work_container {
+  height: 210px;
+}
+.work_container img {
+  margin-left: 25px;
+  margin-right: 25px;
+  margin-top: 10px;
+}
+.rightcolumn {
+  float: right;
+  height: 100%;
+  width: 220px;
+}
+.leftcolumn {
+  width: 700px;
+}
+.rightcolumn .block {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 25px;
+}
+.rightcolumn .block .title {
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
+  background-color: #E6E6E6;
+  padding-left: 10px;
+  padding-top: 5px;
+  padding-right: 10px;
+  padding-bottom: 5px;
+}
+.rightcolumn .block .blockcontent {
+  background-color: #F6F6F6;
+  border-bottom-right-radius: 6px;
+  border-bottom-left-radius: 6px;
+  padding-left: 10px;
+  padding-top: 5px;
+  padding-right: 10px;
+  padding-bottom: 5px;
 }

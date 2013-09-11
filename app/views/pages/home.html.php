@@ -42,7 +42,7 @@ $this->html->style('debug', array('inline' => false));
 foreach($myPosts as $post): ?>
   <hr />
   <div class="post">
-    <h4><?=$post->title ?></h4>
+    <h4><a href="<?= $this->url('MyPosts::view') . '/' . $post->id ?>"><?=$post->title ?></a></h4>
     <div class="body"><?= $this->HTMLPurifier->sanitize($post->body) ?></div>
     <div class="controls"><a href="#top">Top</a></div>
   </div>

@@ -21,7 +21,7 @@ class MyWorks extends \lithium\data\Model
           'type'      => 'text',
           'null'      => true,
       ),
-      'image'              => array(
+      'image_filename'  => array(
           'type'      => 'string',
           'length'    => 100,
           'null'      => false,
@@ -33,6 +33,27 @@ class MyWorks extends \lithium\data\Model
           'length'    => 11,
       ),
   );
+
+  public $imgdir_filesystem = '/var/www/Personal-Blog-Lithium/webroot/img';
+
+  public $imgdir_webserver = 'mywork';
+
+  public function getImageSrc($entity)
+  {
+    if($entity->image_filename)
+    {
+      return $this->imgdir_webserver . '/' . $entity->image_filename;
+    }
+    else
+    {
+      return $this->defaultImage();
+    }
+  }
+
+  public function defaultImage()
+  {
+    return $this->imgdir_webserver . '/default.jpg';
+  }
 
   public static function __init()
   {

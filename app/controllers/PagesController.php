@@ -27,7 +27,7 @@ use app\models\MyPosts;
  */
 class PagesController extends \lithium\action\Controller {
 
-	private $validpages = array('home', 'resume');
+	private $validpages = array('home', 'resume', 'contact');
 
 	public function view() {
 		$options = array();

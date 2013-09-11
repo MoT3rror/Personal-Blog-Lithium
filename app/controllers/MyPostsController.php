@@ -10,7 +10,12 @@ class MyPostsController extends \lithium\action\Controller
   //Define a default 'index' for when a user accesses the /posts/ URL
   public function index()
   {
-    $myPosts = MyPosts::all();
+    $myPosts = MyPosts::find('all', array(
+        'limit'   =>  5,
+        'order'   =>  array(
+            'created_at' => 'DESC',
+        )
+    ));
     //Send the $my_posts object to our view
     return compact('myPosts');
   }

@@ -43,6 +43,11 @@ if ($locales = Environment::get('locales')) {
 Router::connect('/', 'Pages::home');
 
 /**
+ * Add in the store routes. Can be seperate by itself if needed
+ */
+require_once('store_routes.php');
+
+/**
  * Connect the rest of `PagesController`'s URLs. This will route URLs like `/pages/about` to
  * `PagesController`, rendering `/views/pages/about.html.php` as a static page.
  */
