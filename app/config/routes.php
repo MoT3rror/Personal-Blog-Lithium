@@ -53,6 +53,8 @@ require_once('store_routes.php');
  */
 Router::connect('/pages/{:args}', 'Pages::view');
 
+Router::connect('/forum', 'Forum::view');
+
 /**
  * Add the testing routes. These routes are only connected in non-production environments, and allow
  * browser-based access to the test suite for running unit and integration tests for the Lithium
